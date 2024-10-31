@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>時間選擇器</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">   
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    
+</head>
+
+<body style="margin-bottom: 50px;overflow-x: hidden;margin-bottom: 50px;">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JS 套件介紹
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="text-to-speech.html">文字轉語音</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lottie.html">Lottie 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="chart.html">Chart.js 圖表</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lazy-loading.html">圖片懶加載</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="swiper.html">Swiper 幻燈片</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="moment.html">動態時間獲取</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="GSAP.html">GSAP 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Flatpickr.html">時間選擇器</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="JQ_draggable.html">jQuery UI 拖動</a>
+                    </li>
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>時間選擇器</h1>
+        <h5>
+            <a href="https://flatpickr.js.org/" target="_blank" rel="noopener noreferrer">Flatpickr 官網</a>
+        </h5>
+        <p></p>
+    </div>
+
+    <div class="container mt-5">
+        <h3>範例程式碼</h3>
+    </div>
+
+    <div class="container">
+        <div class="style_link" style="background-color: #202746; display: flex; align-items: center; padding: 20px;">
+            <p style="color: white; margin: 0;">
+                &lt;div class="container"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;選擇日期&lt;/h5&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="datepicker" class="form-control mt-3" style="width: auto;" placeholder="點擊選擇日期"&gt;<br>
+                &lt;/div&gt;<br><br>
+                //引入<br>
+                &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css"&gt;<br>
+                &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"&gt;&lt;/script&gt;<br>
+                &lt;script&gt;<br>
+                flatpickr("#datepicker", {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;dateFormat: "Y-m-d",<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;minDate: "today",<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;maxDate: new Date().fp_incr(30),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+                &lt;/script&gt;
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="container mt-5">
+        <h3>效果展示</h3>
+    </div>
+
+    <div class="container">
+        <h5>選擇日期</h5>
+        <input type="text" id="datepicker" class="form-control mt-3" style="width: auto;" placeholder="點擊選擇日期">
+    </div>
+    <script>
+        flatpickr("#datepicker", {
+            dateFormat: "Y-m-d", // 日期格式
+
+        });
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        
+
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>

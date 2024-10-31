@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AOS 動畫</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />    
+    
+</head>
+
+<body style="margin-bottom: 50px;overflow-x: hidden;margin-bottom: 50px;">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JS 套件介紹
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="text-to-speech.html">文字轉語音</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lottie.html">Lottie 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="chart.html">Chart.js 圖表</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lazy-loading.html">圖片懶加載</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="swiper.html">Swiper 幻燈片</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="moment.html">動態時間獲取</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="GSAP.html">GSAP 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Flatpickr.html">時間選擇器</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="JQ_draggable.html">jQuery UI 拖動</a>
+                    </li>
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>AOS 動畫效果</h1>
+        <h5>
+            <a href="https://michalsnik.github.io/aos/" target="_blank" rel="noopener noreferrer">AOS 官網</a>
+        </h5>
+    </div>
+
+    <div class="container mt-5">
+        <h5>在&lt;head&gt;加入:</h5>
+            <div class="style_link"
+                style="background-color: #202746; display: flex; align-items: center;width: 700px;;padding: 20px;">
+                <p style="color: white;margin: 0;">
+                    &lt;<span style="color: #7EE787;">link</span> <span style="color: #569CD6;">rel</span>="<span style="color: #00EFFF;">stylesheet</span>"
+                    <span style="color: #569CD6;">href</span>="<span style="color: #00EFFF;">https://unpkg.com/aos@next/dist/aos.css</span>" /&gt; </p>
+            </div>
+    </div>
+
+    <div class="container mt-5">
+        <h5>在&lt;/body&gt;前加入:</h5>
+        <div class="style_link" style="background-color: #202746; display: inline-flex; align-items: center;width: 700px;; padding: 20px;">
+            <p style="color: white; margin: 0;">
+                &lt;<span style="color: #7EE787;">script</span> <span style="color: #569CD6;">src</span>="<span style="color: #00EFFF;">https://unpkg.com/aos@next/dist/aos.js</span>"
+                &gt;&lt;/<span style="color: #7EE787;">script</span>&gt;<br>
+                &lt;<span style="color: #7EE787;">script</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00EFFF;">AOS</span>.<span style="color: #D2A8FF;">init</span>();<br>
+                &lt;/<span style="color: #7EE787;">script</span>&gt;
+            </p>
+        </div>
+    </div>
+    
+    <!-- model -->
+    <!-- <div id="model" class="container mt-5" style="display: none;">
+        <div data-aos="fade-up"
+            style="height: 150px; padding: 20px; background-color: transparent; border: 20px solid lightgray; display: flex; justify-content: center; align-items: center;">
+            <h5 class="text-center">Fade-Up</h5>
+        </div>
+    </div> -->
+    
+    <div class="container" style="margin-top: 100px;">
+        <h1 class="text-center">動畫效果</h1>
+        <div class="text-center mt-2">
+            <i class="fas fa-angle-down" style="font-size: 24px;"></i>
+        </div>
+    </div>
+
+    <div class="container" style="border-top: 1px solid #000;border-bottom: 1px solid #000;margin-top: 100px;">
+        <h2 class="text-center">FADE</h2>
+    </div>
+
+    <div class="showfade container mt-5"></div>
+
+    <div class="container mt-5" style="border-top: 1px solid #000;border-bottom: 1px solid #000;">
+        <h2 class="text-center">FLIP</h2>
+    </div>
+
+    <div class="showflip container mt-5"></div>
+
+    <div class="container mt-5" style="border-top: 1px solid #000;border-bottom: 1px solid #000;">
+        <h2 class="text-center">ZOOM</h2>
+    </div>
+
+    <div class="showzoom container mt-5"></div>
+
+    <div class="container mt-5" style="border-top: 1px solid #000;border-bottom: 1px solid #000;">
+        <h2 class="text-center">SLIDE</h2>
+    </div>
+
+    <div class="showslide container mt-5"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        let fadeEffects = [
+            'fade-up',
+            'fade-down',
+            'fade-right',
+            'fade-left',
+            'fade-up-right',
+            'fade-up-left',
+            'fade-down-right',
+            'fade-down-left',
+        ]
+
+        // 獲取 showfade 容器
+        const showfade = document.querySelector('.showfade');
+
+        // 動態生成每個效果的區塊
+        fadeEffects.forEach(effect => {
+            const effectDiv = document.createElement('div');
+            effectDiv.classList.add('container', 'mt-5');
+            effectDiv.setAttribute('data-aos', effect);
+            effectDiv.style.height = '150px';
+            effectDiv.style.padding = '20px';
+            effectDiv.style.backgroundColor = 'transparent';
+            effectDiv.style.border = '20px solid lightgray';
+            effectDiv.style.display = 'flex';
+            effectDiv.style.justifyContent = 'center';
+            effectDiv.style.alignItems = 'center';
+            effectDiv.innerHTML = `<h5 class="text-center">&lt;div data-aos="${effect}"&gt;&lt;/div&gt;</h5>`;
+
+            showfade.appendChild(effectDiv);
+        });
+
+
+        let flipEffects = [
+            'flip-left',
+            'flip-right',
+            'flip-up',
+            'flip-down',
+        ]
+
+        // 獲取 showflip 容器
+        const showflip = document.querySelector('.showflip');
+
+        // 動態生成每個效果的區塊
+        fadeEffects.forEach(effect => {
+            const effectDiv = document.createElement('div');
+            effectDiv.classList.add('container', 'mt-5');
+            effectDiv.setAttribute('data-aos', effect);
+            effectDiv.style.height = '150px';
+            effectDiv.style.padding = '20px';
+            effectDiv.style.backgroundColor = 'transparent';
+            effectDiv.style.border = '20px solid lightgray';
+            effectDiv.style.display = 'flex';
+            effectDiv.style.justifyContent = 'center';
+            effectDiv.style.alignItems = 'center';
+            effectDiv.innerHTML = `<h5 class="text-center">&lt;div data-aos="${effect}"&gt;&lt;/div&gt;</h5>`;
+
+            showflip.appendChild(effectDiv);
+        });
+
+        // 定義 zoom 動畫效果
+        let zoomEffects = [
+            'zoom-in',
+            'zoom-out',
+        ];
+
+        // 獲取 showzoom 容器
+        const showzoom = document.querySelector('.showzoom');
+
+        // 動態生成每個效果的區塊
+        zoomEffects.forEach(effect => {
+            const effectDiv = document.createElement('div');
+            effectDiv.classList.add('container', 'mt-5');
+            effectDiv.setAttribute('data-aos', effect);
+            effectDiv.style.height = '150px';
+            effectDiv.style.padding = '20px';
+            effectDiv.style.backgroundColor = 'transparent';
+            effectDiv.style.border = '20px solid lightgray';
+            effectDiv.style.display = 'flex';
+            effectDiv.style.justifyContent = 'center';
+            effectDiv.style.alignItems = 'center';
+            effectDiv.innerHTML = `<h5 class="text-center">&lt;div data-aos="${effect}"&gt;&lt;/div&gt;</h5>`;
+
+            showzoom.appendChild(effectDiv);
+        });
+
+        // 定義 slide 動畫效果
+        let slideEffects = [
+            'slide-up',
+            'slide-down',
+            'slide-left',
+            'slide-right',
+        ];
+
+        // 獲取 showslide 容器
+        const showslide = document.querySelector('.showslide');
+
+        // 動態生成每個效果的區塊
+        slideEffects.forEach(effect => {
+            const effectDiv = document.createElement('div');
+            effectDiv.classList.add('container', 'mt-5');
+            effectDiv.setAttribute('data-aos', effect);
+            effectDiv.style.height = '150px';
+            effectDiv.style.padding = '20px';
+            effectDiv.style.backgroundColor = 'transparent';
+            effectDiv.style.border = '20px solid lightgray';
+            effectDiv.style.display = 'flex';
+            effectDiv.style.justifyContent = 'center';
+            effectDiv.style.alignItems = 'center';
+            effectDiv.innerHTML = `<h5 class="text-center">&lt;div data-aos="${effect}"&gt;&lt;/div&gt;</h5>`;
+
+            showslide.appendChild(effectDiv);
+        });
+
+        // 初始化 AOS
+        AOS.init();
+
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>

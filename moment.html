@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>動態時間獲取</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">   
+    <!-- Monent.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+
+<body style="margin-bottom: 50px;overflow-x: hidden;margin-bottom: 50px;">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JS 套件介紹
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="text-to-speech.html">文字轉語音</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lottie.html">Lottie 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="chart.html">Chart.js 圖表</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lazy-loading.html">圖片懶加載</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="swiper.html">Swiper 幻燈片</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="moment.html">動態時間獲取</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="GSAP.html">GSAP 動畫</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Flatpickr.html">時間選擇器</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="JQ_draggable.html">jQuery UI 拖動</a>
+                    </li>
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>動態時間獲取</h1>
+        <h5>
+            <a href="#" target="_blank" rel="noopener noreferrer">Moment.js 官網</a>
+        </h5>
+        <p></p>
+    </div>
+
+    <div class="container mt-5">
+        <h5>在&lt;head&gt;加入:</h5>
+        <div class="style_link" style="background-color: #202746; display: flex; align-items: center; width: 800px; padding: 20px;">
+            <p style="color: white; margin: 0;">
+                &lt;!-- Moment.js --&gt;<br>
+                &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"&gt;&lt;/script&gt;
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="container mt-5" style="border-top: 1px solid #000;border-bottom: 1px solid #000;">
+        <h2 class="text-center">設定日期格式</h2>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <h5>moment().format('MMMM Do YYYY, h:mm:ss a');</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="formatted-date1"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().format('dddd');</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="formatted-date2"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().format("MMM Do YY");</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="formatted-date3"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().format('YYYY [escaped] YYYY');</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="formatted-date4"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().format();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="formatted-date5"></span></h5>
+            </div>
+        </div>  
+    </div>
+
+    <div class="container mt-5" style="border-top: 1px solid #000;border-bottom: 1px solid #000;">
+        <h2 class="text-center">相對時間</h2>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <h5>moment("20111031", "YYYYMMDD").fromNow();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="relative-time1"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment("20120620", "YYYYMMDD").fromNow();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="relative-time2"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().startOf('day').fromNow();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="relative-time3"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().endOf('day').fromNow();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="relative-time4"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().startOf('hour').fromNow();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="relative-time5"></span></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5" style="border-top: 1px solid #000;border-bottom: 1px solid #000;">
+        <h2 class="text-center">日曆時間</h2>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <h5>moment().subtract(10, 'days').calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time1"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().subtract(6, 'days').calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time2"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().subtract(3, 'days').calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time3"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().subtract(1, 'days').calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time4"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time5"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().add(1, 'days').calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time6"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().add(3, 'days').calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time7"></span></h5>
+            </div>
+            <div class="col-6">
+                <h5>moment().add(10, 'days').calendar();</h5>
+            </div>
+            <div class="col-6">
+                <h5>//<span id="calendar-time8"></span></h5>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 設定日期格式
+        document.getElementById('formatted-date1').innerText = moment().format('MMMM Do YYYY, h:mm:ss a'); 
+        document.getElementById('formatted-date2').innerText = moment().format('dddd');                    
+        document.getElementById('formatted-date3').innerText = moment().format("MMM Do YY");               
+        document.getElementById('formatted-date4').innerText = moment().format('YYYY [escaped] YYYY');     
+        document.getElementById('formatted-date5').innerText = moment().format();                          
+
+        // 相對時間
+        document.getElementById('relative-time1').innerText = moment("20111031", "YYYYMMDD").fromNow(); 
+        document.getElementById('relative-time2').innerText = moment("20120620", "YYYYMMDD").fromNow(); 
+        document.getElementById('relative-time3').innerText = moment().startOf('day').fromNow();        
+        document.getElementById('relative-time4').innerText = moment().endOf('day').fromNow();          
+        document.getElementById('relative-time5').innerText = moment().startOf('hour').fromNow();       
+
+        // 日曆時間
+        document.getElementById('calendar-time1').innerText = moment().subtract(10, 'days').calendar(); 
+        document.getElementById('calendar-time2').innerText = moment().subtract(6, 'days').calendar();  
+        document.getElementById('calendar-time3').innerText = moment().subtract(3, 'days').calendar();  
+        document.getElementById('calendar-time4').innerText = moment().subtract(1, 'days').calendar();  
+        document.getElementById('calendar-time5').innerText = moment().calendar();                      
+        document.getElementById('calendar-time6').innerText = moment().add(1, 'days').calendar();      
+        document.getElementById('calendar-time7').innerText = moment().add(3, 'days').calendar();       
+        document.getElementById('calendar-time8').innerText = moment().add(10, 'days').calendar();   
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        
+
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
